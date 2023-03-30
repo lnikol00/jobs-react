@@ -1,0 +1,49 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    height: 60px;
+    background-color: rgb(242, 238, 238);
+}
+
+.headerContainer .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: rgb(6, 65, 6);
+    text-decoration: none;
+    margin-left: 5rem;
+}
+
+.headerContainer svg {
+    font-size: 1.5rem;
+}
+
+.headerContainer h2 {
+    padding-left: 5px;
+}
+
+.headerContainer .links {
+    display: flex;
+    gap: 30px;
+    margin-right: 5rem;
+}
+
+.links li {
+    list-style: none;
+}
+
+.links .postLink {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(6, 65, 6);
+    padding: 8px 20px;
+}
+
+.links .findLink {
+    text-decoration: none;
+    color: rgb(6, 65, 6);
+    font-weight: 700;
+}
