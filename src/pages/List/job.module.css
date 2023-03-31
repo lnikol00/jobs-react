@@ -1,5 +1,5 @@
 .mainContainer {
-    margin: 5% 10%;
+    margin: 5%;
 }
 
 .jobContainer {
@@ -111,4 +111,15 @@
 
 .desc p {
     line-height: 30px;
+}
+
+.singleJob button {
+    padding: 10px 16px;
+    margin-top: 10px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: rgb(49, 149, 182);
+    color: white;
+    cursor: pointer;
 }

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { JobType } from "./JobList";
 import * as BsIcons from "react-icons/bs"
 import * as GoIcons from "react-icons/go"
+import * as AiIcons from "react-icons/ai"
 
 function JobDetails() {
 
@@ -65,6 +66,17 @@ function JobDetails() {
                             <h2>Kontakt informacije:</h2>
                             <span>{job.contact}</span>
                         </div>
+                        <div className={styles.aplications}>
+                            <h2>Popis prijavljenih osoba:</h2>
+                            {job.aplications.map((person) => {
+                                return (
+                                    <div key={person.id}>
+                                        <span>{person.id}.{person.name} {person.lastname}</span>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <button>Prijavi se za posao</button>
                     </div>
                 </div>
             }
