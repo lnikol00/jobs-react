@@ -1,0 +1,114 @@
+.mainContainer {
+    margin: 5% 10%;
+}
+
+.jobContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.jobContainer h2 {
+    margin: 5px 0px;
+}
+
+.jobContainer a {
+    text-decoration: none;
+    color: black;
+}
+
+.firstSegment {
+    display: flex;
+    gap: 20px;
+}
+
+.firstSegment p {
+    background-color: orange;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.firstSegment span {
+    background-color: rgb(49, 149, 182);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.secondSegment {
+    display: flex;
+    gap: 40px;
+}
+
+.secondSegment span {
+    margin-left: 5px;
+}
+
+.singleJob {
+    border: 1px solid lightgray;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(49, 149, 182);
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+}
+
+.segmentOne {
+    display: flex;
+    gap: 20px;
+}
+
+.segmentOne p {
+    background-color: orange;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.segmentOne span {
+    background-color: white;
+    color: rgb(49, 149, 182);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.segmenTwo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.segmenTwo span {
+    margin-left: 5px;
+}
+
+.desc {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.desc h2 {
+    margin: 10px 0px;
+}
+
+.desc p {
+    line-height: 30px;
+}

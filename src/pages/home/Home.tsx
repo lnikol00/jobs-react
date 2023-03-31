@@ -54,7 +54,7 @@ function Home() {
                 </form>
             </div>
             <div className={styles.image}>
-                <img alt="picture" src={image} />
+                <img alt="slika" src={image} />
             </div>
         </div>
     )

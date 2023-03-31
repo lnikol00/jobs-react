@@ -5,6 +5,7 @@ import Home from './pages/home/Home';
 import Create from './pages/Create/Create';
 import JobList from './pages/List/JobList';
 import NotFound from './pages/NotFound/NotFound';
+import JobDetails from './pages/List/JobDetails';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path='post' element={<Create />} />
             <Route path='find' element={<JobList />} />
+            <Route path='find/:id' element={<JobDetails />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
