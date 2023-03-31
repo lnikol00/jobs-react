@@ -7,7 +7,7 @@ function Header() {
         <div className={styles.headerContainer}>
             <Link to="/" className={styles.heading}>
                 <SiIcons.SiMicrosoftoffice />
-                <h2 >Jobs</h2>
+                <h2>Job Center</h2>
             </Link>
             <div className={styles.links}>
                 <li>

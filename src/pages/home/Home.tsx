@@ -1,16 +1,33 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom";
 import styles from "./home.module.css"
 import image from "./img/slika.jpg"
 import * as FaIcons from "react-icons/fa"
+import PopUp from "./PopUp";
 
 function Home() {
-    const ref = useRef<null>(null);
+    const form = useRef<HTMLFormElement>(null);
     const [email, setEmail] = useState<string>("")
+    const [showPopup, setShowPopup] = useState<boolean>(false)
 
     const handelSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(`mail: ${email}`)
+        form.current?.reset();
+        setShowPopup(true)
+    }
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowPopup(false)
+        }, 5000)
+
+        return () => { clearTimeout(timer) }
+    }, [showPopup])
+
+    let popup = null;
+    if (showPopup) {
+        popup = <PopUp />
     }
 
     return (
@@ -21,8 +38,12 @@ function Home() {
                     Best student jobs are waitigng for you! <br />
                     Just fill in the form and wait for your contanct from job suplier.
                 </span>
-                <form ref={ref} onSubmit={handelSubmit}>
+                <div className={styles.popup}>
+                    {popup}
+                </div>
+                <form ref={form} onSubmit={handelSubmit}>
                     <input
+                        type="email"
                         value={email}
                         placeholder="Your Email Address"
                         onChange={(e) => setEmail(e.target.value)}

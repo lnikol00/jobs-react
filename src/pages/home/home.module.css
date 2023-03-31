@@ -32,7 +32,6 @@
 .text input {
     border: 1px solid lightgray;
     padding: 10px 20px;
-    margin-top: 20px;
 }
 
 .text button {
@@ -47,4 +46,44 @@
 .text .findLink {
     color: rgb(7, 48, 7);
     font-weight: 700;
+}
+
+.popupContainer {
+    display: flex;
+    /* padding: 20px 0px; */
+    border: 1px solid green;
+    /* border-radius: 16px; */
+    width: 500px;
+    text-align: center;
+    background-color: lightgreen;
+    position: absolute;
+    right: 5rem;
+    top: 7rem;
+    flex-direction: column;
+}
+
+.note {
+    display: flex;
+    margin-bottom: 10px;
+    padding: 20px 20px 5px;
+}
+
+.popupContainer svg {
+    border-radius: 50%;
+    border: 2px solid green;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.progressBar {
+    position: relative;
+    overflow: hidden;
+    width: 499px;
+    height: 5px;
+    background-color: lightgreen;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
 }
