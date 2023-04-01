@@ -1,10 +1,9 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import styles from "./job.module.css"
 import { useEffect, useState } from "react";
 import { JobType } from "./JobList";
 import * as BsIcons from "react-icons/bs"
 import * as GoIcons from "react-icons/go"
-import * as AiIcons from "react-icons/ai"
 
 function JobDetails() {
 
@@ -71,12 +70,12 @@ function JobDetails() {
                             {job.aplications.map((person) => {
                                 return (
                                     <div key={person.id}>
-                                        <span>{person.id}.{person.name} {person.lastname}</span>
+                                        <span>{person.id}.{person.name} {person.lastName}</span>
                                     </div>
                                 )
                             })}
                         </div>
-                        <button>Prijavi se za posao</button>
+                        <Link to="job-aplication" className={styles.button}><button >Prijavi se za posao</button></Link>
                     </div>
                 </div>
             }

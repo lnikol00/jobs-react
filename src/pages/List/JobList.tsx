@@ -3,8 +3,6 @@ import styles from "./job.module.css"
 import { Link } from "react-router-dom"
 import * as GoIcons from "react-icons/go"
 import * as BsIcons from "react-icons/bs"
-import { type } from "os"
-
 
 export type JobType = {
     id: number
@@ -21,7 +19,7 @@ export type JobType = {
 type Names = {
     id: number
     name: string
-    lastname: string
+    lastName: string
 }
 
 type JobsType = Array<JobType>

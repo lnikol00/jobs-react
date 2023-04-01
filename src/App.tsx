@@ -6,6 +6,7 @@ import Create from './pages/Create/Create';
 import JobList from './pages/List/JobList';
 import NotFound from './pages/NotFound/NotFound';
 import JobDetails from './pages/List/JobDetails';
+import Aply from './pages/List/Aply';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='post' element={<Create />} />
             <Route path='find' element={<JobList />} />
             <Route path='find/:id' element={<JobDetails />} />
+            <Route path='/find/:id/job-aplication' element={<Aply />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>

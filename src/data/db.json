@@ -13,17 +13,17 @@
                 {
                     "id": 1,
                     "name": "Luka",
-                    "lastname": "Nikolac"
+                    "lastName": "Nikolac"
                 },
                 {
                     "id": 2,
                     "name": "Duje",
-                    "lastname": "Nikolac"
+                    "lastName": "Nikolac"
                 },
                 {
                     "id": 3,
                     "name": "Marta",
-                    "lastname": "Glamuzina"
+                    "lastName": "Glamuzina"
                 }
             ]
         },
@@ -40,17 +40,20 @@
                 {
                     "id": 1,
                     "name": "Mate",
-                    "lastname": "Matić"
+                    "lastName": "Matić",
+                    "phone": "0916549872"
                 },
                 {
                     "id": 2,
                     "name": "Duje",
-                    "lastname": "Božić"
+                    "lastName": "Božić",
+                    "phone": "0998746531"
                 },
                 {
                     "id": 3,
                     "name": "Bla",
-                    "lastname": "Bla"
+                    "lastName": "Bla",
+                    "phone": "0959975413"
                 }
             ]
         },
@@ -67,17 +70,20 @@
                 {
                     "id": 1,
                     "name": "Joško",
-                    "lastname": "Gvardiol"
+                    "lastName": "Gvardiol",
+                    "phone": "09798765431"
                 },
                 {
                     "id": 2,
                     "name": "Petar",
-                    "lastname": "Petrić"
+                    "lastName": "Petrić",
+                    "phone": "09874563214"
                 },
                 {
                     "id": 3,
                     "name": "Šime",
-                    "lastname": "Lazić"
+                    "lastName": "Lazić",
+                    "phone": "09789765412"
                 }
             ]
         }

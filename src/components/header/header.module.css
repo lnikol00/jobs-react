@@ -5,6 +5,7 @@
     padding: 1.5rem;
     height: 60px;
     background-color: rgb(242, 238, 238);
+    box-shadow: 5px 0px 10px #ccc;
 }
 
 .headerContainer .heading {
