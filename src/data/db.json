@@ -1,91 +1,102 @@
 {
-    "jobs": [
+  "jobs": [
+    {
+      "title": "Administrativni poslovi",
+      "field": "Uredski poslovi",
+      "firm": "Adriatic.hr. d.o.o",
+      "location": "Split",
+      "price": "4.8",
+      "desc": "Govorite engleski ili neki drugi svjetski jezik? Tražimo osobe (m/ž) za rad na rezervacijskom sustavu u našem uredu u Splitu, koje izvrsno govore engleski, mađarski, njemački, poljski, slovenski, češki, slovački, francuski, talijanski, nizozemski ili neki drugi svjetski jezik te koje će telefonski i e-mailom komunicirati s gostima, pomagati im u izboru smještaja na Jadranu te obavljati administrativni dio posla vezan uz rezervacije. *Uvjeti* Poznajete osnove hrvatskog jezika, a neki od jezika vam je materinji ili se njime služite izvrsno, kao da vam je materinji, poznajete pravila poslovnog dopisivanja i rada u uredskim aplikacijama? *Pogodnosti:* - Mogućnost rada 40 sati tjedno - SATNICA 4,8 € - + 50% uvećanje satnice za rad praznikom i vikendom - Fleksibilno radno vrijeme za vrijeme ispita i studentskih obveza - Mogućnost dugogodišnjeg rada - Rad u kreativnom okruženju - Ugodnu radnu atmosferu u moderno opremljenim uredima - Stjecanje iskustva u radu u turizmu - Stjecanje i usavršavanje pregovaračkuh i interpersonalnih vještina *Pridruži se uspješnoj priči koja traje već više od 20 godina i svojom vizijom ojačaj naše mjesto vodeće agencije u Hrvatskoj na području pružanja online booking usluga privatnog smještaja. Čekamo te!*",
+      "contact": "https://www.adriatic.hr/about/posao",
+      "id": 1,
+      "aplications": [
         {
-            "title": "Administrativni poslovi",
-            "field": "Uredski poslovi",
-            "firm": "Adriatic.hr. d.o.o",
-            "location": "Split",
-            "price": "4.8",
-            "desc": "Govorite engleski ili neki drugi svjetski jezik? Tražimo osobe (m/ž) za rad na rezervacijskom sustavu u našem uredu u Splitu, koje izvrsno govore engleski, mađarski, njemački, poljski, slovenski, češki, slovački, francuski, talijanski, nizozemski ili neki drugi svjetski jezik te koje će telefonski i e-mailom komunicirati s gostima, pomagati im u izboru smještaja na Jadranu te obavljati administrativni dio posla vezan uz rezervacije. *Uvjeti* Poznajete osnove hrvatskog jezika, a neki od jezika vam je materinji ili se njime služite izvrsno, kao da vam je materinji, poznajete pravila poslovnog dopisivanja i rada u uredskim aplikacijama? *Pogodnosti:* - Mogućnost rada 40 sati tjedno - SATNICA 4,8 € - + 50% uvećanje satnice za rad praznikom i vikendom - Fleksibilno radno vrijeme za vrijeme ispita i studentskih obveza - Mogućnost dugogodišnjeg rada - Rad u kreativnom okruženju - Ugodnu radnu atmosferu u moderno opremljenim uredima - Stjecanje iskustva u radu u turizmu - Stjecanje i usavršavanje pregovaračkuh i interpersonalnih vještina *Pridruži se uspješnoj priči koja traje već više od 20 godina i svojom vizijom ojačaj naše mjesto vodeće agencije u Hrvatskoj na području pružanja online booking usluga privatnog smještaja. Čekamo te!*",
-            "contact": "https://www.adriatic.hr/about/posao",
-            "id": 1,
-            "aplications": [
-                {
-                    "id": 1,
-                    "name": "Luka",
-                    "lastName": "Nikolac"
-                },
-                {
-                    "id": 2,
-                    "name": "Duje",
-                    "lastName": "Nikolac"
-                },
-                {
-                    "id": 3,
-                    "name": "Marta",
-                    "lastName": "Glamuzina"
-                }
-            ]
+          "id": 1,
+          "name": "Luka",
+          "lastName": "Nikolac"
         },
         {
-            "title": "Konobarski poslovi",
-            "field": "Ugostiteljstvo i turizam",
-            "firm": "Anthony, obrt za ugostiteljstvo i turizam",
-            "location": "Mastrnika/trogir",
-            "desc": "",
-            "price": "4.4",
-            "contact": "0992364626",
-            "id": 2,
-            "aplications": [
-                {
-                    "id": 1,
-                    "name": "Mate",
-                    "lastName": "Matić",
-                    "phone": "0916549872"
-                },
-                {
-                    "id": 2,
-                    "name": "Duje",
-                    "lastName": "Božić",
-                    "phone": "0998746531"
-                },
-                {
-                    "id": 3,
-                    "name": "Bla",
-                    "lastName": "Bla",
-                    "phone": "0959975413"
-                }
-            ]
+          "id": 2,
+          "name": "Duje",
+          "lastName": "Nikolac"
         },
         {
-            "title": "Konobarski poslovi",
-            "field": "Ugostiteljstvo i turizam",
-            "firm": "Hooper. d.o.o",
-            "location": "Split",
-            "price": "4.38",
-            "desc": "Caffe bar 'Azzuro' ,Focus Ruđera Boškovica 16A ex Prima",
-            "contact": "0913131302-Mate",
-            "id": 3,
-            "aplications": [
-                {
-                    "id": 1,
-                    "name": "Joško",
-                    "lastName": "Gvardiol",
-                    "phone": "09798765431"
-                },
-                {
-                    "id": 2,
-                    "name": "Petar",
-                    "lastName": "Petrić",
-                    "phone": "09874563214"
-                },
-                {
-                    "id": 3,
-                    "name": "Šime",
-                    "lastName": "Lazić",
-                    "phone": "09789765412"
-                }
-            ]
+          "id": 3,
+          "name": "Marta",
+          "lastName": "Glamuzina"
         }
-    ]
+      ]
+    },
+    {
+      "title": "Konobarski poslovi",
+      "field": "Ugostiteljstvo i turizam",
+      "firm": "Anthony, obrt za ugostiteljstvo i turizam",
+      "location": "Mastrnika/trogir",
+      "desc": "",
+      "price": "4.4",
+      "contact": "0992364626",
+      "id": 2,
+      "aplications": [
+        {
+          "id": 1,
+          "name": "Mate",
+          "lastName": "Matić",
+          "phone": "0916549872"
+        },
+        {
+          "id": 2,
+          "name": "Duje",
+          "lastName": "Božić",
+          "phone": "0998746531"
+        },
+        {
+          "id": 3,
+          "name": "Bla",
+          "lastName": "Bla",
+          "phone": "0959975413"
+        }
+      ]
+    },
+    {
+      "title": "Konobarski poslovi",
+      "field": "Ugostiteljstvo i turizam",
+      "firm": "Hooper. d.o.o",
+      "location": "Split",
+      "price": "4.38",
+      "desc": "Caffe bar 'Azzuro' ,Focus Ruđera Boškovica 16A ex Prima",
+      "contact": "0913131302-Mate",
+      "id": 3,
+      "aplications": [
+        {
+          "id": 1,
+          "name": "Joško",
+          "lastName": "Gvardiol",
+          "phone": "09798765431"
+        },
+        {
+          "id": 2,
+          "name": "Petar",
+          "lastName": "Petrić",
+          "phone": "09874563214"
+        },
+        {
+          "id": 3,
+          "name": "Šime",
+          "lastName": "Lazić",
+          "phone": "09789765412"
+        }
+      ]
+    },
+    {
+      "price": "6",
+      "field": "Fizički poslovi",
+      "title": "Fizički poslovi",
+      "firm": "Tepihcentar d.o.o",
+      "location": "Split",
+      "desc": "Pomoćni radovi, dodavanje materijala kod postavljanja laminata, čišćenje, bacanje smeća i ostali slični poslovi.",
+      "contact": "099 2433 346",
+      "aplications": [],
+      "id": 4
+    }
+  ]
 }

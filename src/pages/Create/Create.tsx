@@ -33,54 +33,66 @@ function Create() {
     return (
         <div className={styles.mainContainer}>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Satnica:</label>
-                    <input
-                        value={price}
-                        onChange={(e) => setPrice(e.target.value)}
-                    />
-                    <label>Kategorija:</label>
-                    <select
-                        value={field}
-                        onChange={(e) => setField(e.target.value)}
-                    >
-                        <option value="Uredski poslovi">Uredski poslovi</option>
-                        <option value="Ugostiteljstvo i turizam">Ugostiteljstvo i turizam</option>
-                        <option value="Fizički poslovi">Fizički poslovi</option>
-                        <option value="Informatički poslovi">Informatički poslovi</option>
-                        <option value="Intelektualni poslovi">Intelektualni poslovi</option>
-                        <option value="Prodaja">Prodaja</option>
-                        <option value="Promidžba">Promidžba</option>
-                    </select>
+                <h1>Post a job!</h1>
+                <div className={styles.firstSegment}>
+                    <div>
+                        <label>Satnica:</label>
+                        <input
+                            value={price}
+                            onChange={(e) => setPrice(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label>Kategorija:</label>
+                        <select
+                            value={field}
+                            onChange={(e) => setField(e.target.value)}
+                            required
+                        >
+                            <option value="Uredski poslovi">Uredski poslovi</option>
+                            <option value="Ugostiteljstvo i turizam">Ugostiteljstvo i turizam</option>
+                            <option value="Fizički poslovi">Fizički poslovi</option>
+                            <option value="Informatički poslovi">Informatički poslovi</option>
+                            <option value="Intelektualni poslovi">Intelektualni poslovi</option>
+                            <option value="Prodaja">Prodaja</option>
+                            <option value="Promidžba">Promidžba</option>
+                        </select>
+                    </div>
                 </div>
-                <label>Naslov:</label>
-                <input
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                />
-                <label>Firma:</label>
-                <input
-                    value={firm}
-                    onChange={(e) => setFirm(e.target.value)}
-                />
-                <label>Lokacija:</label>
-                <input
-                    value={location}
-                    onChange={(e) => setLocation(e.target.value)}
+                <div className={styles.secondSegment}>
+                    <label>Naslov:</label>
+                    <input
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        required
+                    />
+                    <label>Firma:</label>
+                    <input
+                        value={firm}
+                        onChange={(e) => setFirm(e.target.value)}
+                        required
+                    />
+                    <label>Lokacija:</label>
+                    <input
+                        value={location}
+                        onChange={(e) => setLocation(e.target.value)}
+                        required
 
-                />
-                <label>Opis posla:</label>
-                <textarea
-                    value={desc}
-                    onChange={(e) => setDesc(e.target.value)}
+                    />
+                    <label>Opis posla:</label>
+                    <textarea
+                        value={desc}
+                        onChange={(e) => setDesc(e.target.value)}
 
-                />
-                <label>Kontakt informacije:</label>
-                <input
-                    value={contact}
-                    onChange={(e) => setContact(e.target.value)}
-                />
-                <button>Dodaj posao</button>
+                    />
+                    <label>Kontakt informacije:</label>
+                    <input
+                        value={contact}
+                        onChange={(e) => setContact(e.target.value)}
+                    />
+                </div>
+                <button disabled={!price || !title || !firm || !location}>Dodaj posao</button>
             </form>
         </div>
     )
