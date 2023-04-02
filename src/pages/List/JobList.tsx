@@ -3,6 +3,7 @@ import styles from "./job.module.css"
 import { Link } from "react-router-dom"
 import * as GoIcons from "react-icons/go"
 import * as BsIcons from "react-icons/bs"
+import * as BiIcons from "react-icons/bi"
 
 export type JobType = {
     id: number
@@ -73,6 +74,10 @@ function JobList() {
                                 <div>
                                     <GoIcons.GoLocation />
                                     <span>{job.location}</span>
+                                </div>
+                                <div>
+                                    <BiIcons.BiUser />
+                                    <span>{job.max}</span>
                                 </div>
                             </div>
                         </Link>

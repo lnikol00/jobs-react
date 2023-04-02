@@ -49,7 +49,7 @@ function Aply() {
         e.preventDefault();
         const person = { name, lastName, phone }
 
-        fetch(`http://localhost:8000/jobs/aplications`, {
+        fetch(`http://localhost:8000/jobs/`, {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(person)
@@ -57,7 +57,6 @@ function Aply() {
             console.log("new applicant added")
         })
         navigate(-1)
-
     }
 
     return (

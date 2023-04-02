@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import { JobType } from "./JobList";
 import * as BsIcons from "react-icons/bs"
 import * as GoIcons from "react-icons/go"
+import * as BiIcons from "react-icons/bi"
 
 function JobDetails() {
 
     const params = useParams();
 
     const [job, setJob] = useState<JobType>()
+    const [person, setPerson] = useState()
     const [error, setError] = useState<null>(null)
     const [isLoading, setIsLoading] = useState<boolean>(true)
     const [disable, setDisable] = useState<boolean>(false)
@@ -63,6 +65,10 @@ function JobDetails() {
                                 <GoIcons.GoLocation />
                                 <span>{job.location}</span>
                             </div>
+                            <div>
+                                <BiIcons.BiUser />
+                                <span>{job.max}</span>
+                            </div>
                         </div>
                     </div>
                     <div className={styles.desc}>
@@ -84,7 +90,7 @@ function JobDetails() {
                                 )
                             })}
                         </div>
-                        <Link to="job-aplication" className={styles.button}><button disabled={disable}>Prijavi se za posao</button></Link>
+                        <Link to="job-aplication" className={styles.button}><button disabled={disable} >Prijavi se za posao</button></Link>
                     </div>
                 </div>
             }

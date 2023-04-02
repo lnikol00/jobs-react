@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 function Create() {
 
     const [price, setPrice] = useState<string>("")
+    const [worker, setWorker] = useState<string>("")
     const [field, setField] = useState<string>("Uredski poslovi")
     const [title, setTitle] = useState<string>("")
     const [firm, setFirm] = useState<string>("")
@@ -36,7 +37,7 @@ function Create() {
                 <h1>Post a job!</h1>
                 <div className={styles.firstSegment}>
                     <div>
-                        <label>Satnica:</label>
+                        <label>Satnica: *</label>
                         <input
                             value={price}
                             onChange={(e) => setPrice(e.target.value)}
@@ -44,7 +45,7 @@ function Create() {
                         />
                     </div>
                     <div>
-                        <label>Kategorija:</label>
+                        <label>Kategorija: *</label>
                         <select
                             value={field}
                             onChange={(e) => setField(e.target.value)}
@@ -59,21 +60,30 @@ function Create() {
                             <option value="Promidžba">Promidžba</option>
                         </select>
                     </div>
+                    <div>
+                        <label>Br. slob. mjesta: *</label>
+                        <input
+                            value={worker}
+                            onChange={(e) => setWorker(e.target.value)}
+                            required
+                        >
+                        </input>
+                    </div>
                 </div>
                 <div className={styles.secondSegment}>
-                    <label>Naslov:</label>
+                    <label>Naslov: *</label>
                     <input
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
                     />
-                    <label>Firma:</label>
+                    <label>Firma: *</label>
                     <input
                         value={firm}
                         onChange={(e) => setFirm(e.target.value)}
                         required
                     />
-                    <label>Lokacija:</label>
+                    <label>Lokacija: *</label>
                     <input
                         value={location}
                         onChange={(e) => setLocation(e.target.value)}
@@ -92,7 +102,7 @@ function Create() {
                         onChange={(e) => setContact(e.target.value)}
                     />
                 </div>
-                <button disabled={!price || !title || !firm || !location}>Dodaj posao</button>
+                <button disabled={!price || !title || !firm || !location || !worker}>Dodaj posao</button>
             </form>
         </div>
     )
