@@ -15,6 +15,7 @@ function Home() {
         console.log(`mail: ${email}`)
         form.current?.reset();
         setShowPopup(true)
+        setEmail("")
     }
 
     useEffect(() => {

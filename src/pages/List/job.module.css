@@ -124,6 +124,10 @@
     color: white;
 }
 
+.singleJob button:disabled {
+    cursor: not-allowed;
+}
+
 .button a {
     text-decoration: none;
 }

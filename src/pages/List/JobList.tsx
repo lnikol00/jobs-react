@@ -13,6 +13,7 @@ export type JobType = {
     contact: string
     field: string
     price: string
+    max: number
     aplications: Names[]
 }
 

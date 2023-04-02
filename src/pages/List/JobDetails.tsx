@@ -12,6 +12,7 @@ function JobDetails() {
     const [job, setJob] = useState<JobType>()
     const [error, setError] = useState<null>(null)
     const [isLoading, setIsLoading] = useState<boolean>(true)
+    const [disable, setDisable] = useState<boolean>(false)
 
     useEffect(() => {
         fetch(`http://localhost:8000/jobs/${params.id}`)
@@ -32,6 +33,14 @@ function JobDetails() {
             })
 
     }, [params.id])
+
+    useEffect(() => {
+        if (job?.aplications.length === job?.max) {
+            setDisable(true)
+        } else {
+            setDisable(false)
+        }
+    }, [job?.aplications.length, job?.max])
 
     return (
         <div className={styles.mainContainer}>
@@ -75,7 +84,7 @@ function JobDetails() {
                                 )
                             })}
                         </div>
-                        <Link to="job-aplication" className={styles.button}><button >Prijavi se za posao</button></Link>
+                        <Link to="job-aplication" className={styles.button}><button disabled={disable}>Prijavi se za posao</button></Link>
                     </div>
                 </div>
             }
