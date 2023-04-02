@@ -4,6 +4,8 @@ import { Link } from "react-router-dom"
 import * as GoIcons from "react-icons/go"
 import * as BsIcons from "react-icons/bs"
 import * as BiIcons from "react-icons/bi"
+import * as GrIcons from "react-icons/gr"
+import * as AiIcons from "react-icons/ai"
 
 export type JobType = {
     id: number
@@ -32,6 +34,13 @@ function JobList() {
     const [error, setError] = useState<null>(null)
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
+    const [search, setSearch] = useState<string>("")
+    const [show, setShow] = useState<boolean>(false)
+
+    const changeState = () => {
+        setShow(!show)
+    }
+
     useEffect(() => {
         fetch("http://localhost:8000/jobs")
             .then((response) => {
@@ -57,7 +66,33 @@ function JobList() {
         <div className={styles.mainContainer}>
             {isLoading && <div>Loading...</div>}
             {error && <div>{error}</div>}
-            {jobs && jobs.map((job) => {
+            <div className={styles.filterContainer}>
+                <div className={styles.search}>
+                    <AiIcons.AiOutlineSearch />
+                    <input onChange={(e) => setSearch(e.target.value)} />
+                </div>
+                <div className={styles.filter} onClick={changeState}>
+                    <GrIcons.GrFilter />
+                    {show ? <div className={styles.hidenFilter}>
+                        <div>Svi poslovi</div>
+                        <div>Fizički poslovi</div>
+                        <div>Uredski poslovi</div>
+                        <div>Ugostiteljstvo i turizam</div>
+                        <div>Informatički poslovi</div>
+                        <div>Intelektualni poslovi</div>
+                        <div>Prodaja</div>
+                        <div>Promidžba</div>
+                    </div> : null}
+                </div>
+            </div>
+            {jobs && jobs.filter((job) => {
+                if (search === "") {
+                    return job;
+                }
+                else if (job.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())) {
+                    return job;
+                }
+            }).map((job) => {
                 return (
                     <div className={styles.jobContainer} key={job.id}>
                         <Link to={`/find/${job.id}`} >

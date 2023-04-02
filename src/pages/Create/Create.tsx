@@ -19,7 +19,7 @@ function Create() {
     const handleSubmit = (e: React.FocusEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-        const job = { price, field, title, firm, location, desc, contact, aplications }
+        const job = { price, field, title, firm, location, desc, contact, aplications, worker }
 
         fetch("http://localhost:8000/jobs", {
             method: "POST",

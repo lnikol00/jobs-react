@@ -1,5 +1,70 @@
 .mainContainer {
-    margin: 5%;
+    margin: 2.5% 5%;
+}
+
+.filterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 20px;
+}
+
+.filterContainer .search {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    width: 200px;
+    font-size: 18px;
+    padding-left: 10px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter .hidenFilter {
+    position: absolute;
+    right: 5rem;
+    padding: 10px;
+    top: 9rem;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    z-index: 1;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    width: 300px;
+}
+
+.hidenFilter div {
+    border: 1px solid gray;
+    margin: 5px 0px;
+    width: auto;
+    padding: 10px 0px;
+    border-radius: 8px;
+}
+
+.hidenFilter div:hover {
+    background-color: rgb(6, 65, 6);
+    color: white;
+}
+
+.search input {
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+.filterContainer .filter {
+    text-align: center;
+    border: 1px solid lightgrey;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .jobContainer {
