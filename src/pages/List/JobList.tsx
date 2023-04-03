@@ -35,14 +35,10 @@ function JobList() {
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
     const [search, setSearch] = useState<string>("")
-    const [show, setShow] = useState<boolean>(false)
-
-    const changeState = () => {
-        setShow(!show)
-    }
+    const [filter, setFilter] = useState<string>("Svi poslovi")
 
     useEffect(() => {
-        fetch("http://localhost:8000/jobs")
+        fetch("http://localhost:8000/jobs/")
             .then((response) => {
                 if (!response.ok) {
                     throw Error('Sorry, we could not fetch the data!')
@@ -71,56 +67,67 @@ function JobList() {
                     <AiIcons.AiOutlineSearch />
                     <input onChange={(e) => setSearch(e.target.value)} />
                 </div>
-                <div className={styles.filter} onClick={changeState}>
+                <div className={styles.filter}>
                     <GrIcons.GrFilter />
-                    {show ? <div className={styles.hidenFilter}>
-                        <div>Svi poslovi</div>
-                        <div>Fizički poslovi</div>
-                        <div>Uredski poslovi</div>
-                        <div>Ugostiteljstvo i turizam</div>
-                        <div>Informatički poslovi</div>
-                        <div>Intelektualni poslovi</div>
-                        <div>Prodaja</div>
-                        <div>Promidžba</div>
-                    </div> : null}
+                    <select
+                        value={filter}
+                        onChange={(e) => setFilter(e.target.value)}
+                    >
+                        <option value="Svi poslovi">Svi poslovi</option>
+                        <option value="Uredski poslovi">Uredski poslovi</option>
+                        <option value="Ugostiteljstvo i turizam">Ugostiteljstvo i turizam</option>
+                        <option value="Fizički poslovi">Fizički poslovi</option>
+                        <option value="Informatički poslovi">Informatički poslovi</option>
+                        <option value="Intelektualni poslovi">Intelektualni poslovi</option>
+                        <option value="Prodaja">Prodaja</option>
+                        <option value="Promidžba">Promidžba</option>
+                    </select>
                 </div>
             </div>
-            {jobs && jobs.filter((job) => {
-                if (search === "") {
-                    return job;
-                }
-                else if (job.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())) {
-                    return job;
-                }
-            }).map((job) => {
-                return (
-                    <div className={styles.jobContainer} key={job.id}>
-                        <Link to={`/find/${job.id}`} >
-                            <div className={styles.firstSegment}>
-                                <p>{job.price}€/h</p>
-                                <span>{job.field}</span>
-                            </div>
-                            <h2>{job.title}</h2>
-                            <div className={styles.secondSegment}>
-                                <div>
-                                    <BsIcons.BsBuildings />
-                                    <span>{job.firm}</span>
+            {
+                jobs && jobs.filter((job) => {
+                    if (search === "") {
+                        return job;
+                    }
+                    else if (job.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())) {
+                        return job;
+                    }
+                }).filter((job) => {
+                    if (filter === "Svi poslovi") {
+                        return job;
+                    }
+                    else if (job.field.toLocaleLowerCase().includes(filter.toLocaleLowerCase())) {
+                        return job;
+                    }
+                }).map((job) => {
+                    return (
+                        <div className={styles.jobContainer} key={job.id}>
+                            <Link to={`/find/${job.id}`} >
+                                <div className={styles.firstSegment}>
+                                    <p>{job.price}€/h</p>
+                                    <span>{job.field}</span>
                                 </div>
-                                <div>
-                                    <GoIcons.GoLocation />
-                                    <span>{job.location}</span>
+                                <h2>{job.title}</h2>
+                                <div className={styles.secondSegment}>
+                                    <div>
+                                        <BsIcons.BsBuildings />
+                                        <span>{job.firm}</span>
+                                    </div>
+                                    <div>
+                                        <GoIcons.GoLocation />
+                                        <span>{job.location}</span>
+                                    </div>
+                                    <div>
+                                        <BiIcons.BiUser />
+                                        <span>{job.max}</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <BiIcons.BiUser />
-                                    <span>{job.max}</span>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
-                )
-            })
+                            </Link>
+                        </div>
+                    )
+                })
             }
-        </div>
+        </div >
     )
 }
 

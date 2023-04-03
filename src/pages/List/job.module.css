@@ -12,7 +12,6 @@
 .filterContainer .search {
     display: flex;
     align-items: center;
-    width: 40px;
     height: 40px;
     border: 1px solid lightgray;
     border-radius: 8px;
@@ -32,15 +31,20 @@
     border-radius: 8px;
     z-index: 1;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-    display: grid;
     width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .hidenFilter div {
     border: 1px solid gray;
-    margin: 5px 0px;
+    margin: 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
     width: auto;
-    padding: 10px 0px;
+    padding: 5px 0px;
     border-radius: 8px;
 }
 
@@ -56,16 +60,25 @@
 }
 
 .filterContainer .filter {
-    text-align: center;
+    display: flex;
+    align-items: center;
     border: 1px solid lightgrey;
     font-size: 18px;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-    width: 40px;
+    width: 200px;
     height: 40px;
     cursor: pointer;
 }
+
+.filter select {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
 
 .jobContainer {
     display: flex;

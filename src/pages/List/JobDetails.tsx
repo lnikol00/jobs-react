@@ -82,7 +82,7 @@ function JobDetails() {
                         </div>
                         <div className={styles.aplications}>
                             <h2>Popis prijavljenih osoba:</h2>
-                            {job.aplications.map((person) => {
+                            {job.aplications && job.aplications.map((person) => {
                                 return (
                                     <div key={person.id}>
                                         <span>{person.id}.{person.name} {person.lastName}</span>
