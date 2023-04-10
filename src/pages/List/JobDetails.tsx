@@ -5,6 +5,7 @@ import { JobType } from "./JobList";
 import * as BsIcons from "react-icons/bs"
 import * as GoIcons from "react-icons/go"
 import * as BiIcons from "react-icons/bi"
+import PopUp from "./PopUp";
 
 function JobDetails() {
 
@@ -15,6 +16,8 @@ function JobDetails() {
     const [error, setError] = useState<null>(null)
     const [isLoading, setIsLoading] = useState<boolean>(true)
     const [disable, setDisable] = useState<boolean>(false)
+    const [popUp, setPopUp] = useState<boolean>(false)
+
 
     useEffect(() => {
         fetch(`http://localhost:8000/jobs/${params.id}`)
@@ -36,11 +39,18 @@ function JobDetails() {
 
     }, [params.id])
 
+    let popup = null;
+    if (popUp) {
+        popup = <PopUp />
+    }
+
     useEffect(() => {
         if (job?.aplications.length === job?.max) {
             setDisable(true)
+            setPopUp(true)
         } else {
             setDisable(false)
+            setPopUp(false)
         }
     }, [job?.aplications.length, job?.max])
 
@@ -90,6 +100,7 @@ function JobDetails() {
                                 )
                             })}
                         </div>
+                        {popup}
                         <Link to="job-aplication" className={styles.button}><button disabled={disable} >Prijavi se za posao</button></Link>
                     </div>
                 </div>
