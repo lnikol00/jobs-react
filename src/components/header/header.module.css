@@ -48,3 +48,46 @@
     color: rgb(6, 65, 6);
     font-weight: 700;
 }
+
+.menuItem {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .menuItem {
+        display: block;
+        transform: translate(0%, 10%);
+        cursor: pointer;
+        color: rgb(6, 65, 6);
+    }
+
+    .links {
+        position: fixed;
+        top: 0;
+        left: -5%;
+        background-color: rgb(242, 238, 238);
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        flex-direction: column;
+        width: 300px;
+        height: 150vh;
+        transition: 0.5s ease;
+    }
+
+    .links .close {
+        padding-right: 14rem;
+        cursor: pointer;
+        color: rgb(6, 65, 6);
+    }
+
+    .links li {
+        padding: 25px 40px 10px;
+        text-align: center;
+    }
+
+    .closed {
+        left: -100%;
+        transition: 0.5s ease;
+    }
+}
