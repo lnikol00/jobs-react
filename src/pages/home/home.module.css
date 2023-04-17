@@ -50,9 +50,7 @@
 
 .popupContainer {
     display: flex;
-    /* padding: 20px 0px; */
     border: 1px solid green;
-    /* border-radius: 16px; */
     width: 500px;
     text-align: center;
     background-color: lightgreen;
@@ -86,4 +84,47 @@
     background-color: lightgreen;
     border-left: 1px solid green;
     border-right: 1px solid green;
+}
+
+@media screen and (max-width:1200px) {
+    .text h1 {
+        font-size: 3rem;
+    }
+
+    .text span {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:890px) {
+    .mainContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .image img {
+        width: 300px;
+    }
+
+    .popupContainer {
+        right: 1rem;
+        width: 300px;
+    }
+
+    .popupContainer svg {
+        width: 50px;
+        text-align: center;
+        height: 30px;
+    }
+
+    .note {
+        align-items: center;
+    }
+
+    .progressBar {
+        width: 299px;
+    }
 }

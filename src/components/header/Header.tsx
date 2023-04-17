@@ -15,17 +15,19 @@ function Header() {
 
     return (
         <div className={styles.headerContainer}>
-            <div className={styles.menuItem}>
-                <FaIcons.FaBars onClick={onChange} />
-            </div>
+            {
+                !open ? <div className={styles.menuItem}>
+                    <FaIcons.FaBars onClick={onChange} />
+                </div> :
+                    <div className={styles.close}>
+                        <AiIcons.AiOutlineClose onClick={onChange} />
+                    </div>
+            }
             <Link to="/" className={styles.heading}>
                 <SiIcons.SiMicrosoftoffice />
                 <h2>Job Center</h2>
             </Link>
-            <div className={open ? `${styles.closed} ${styles.links}` : `${styles.links}`} onClick={onChange}>
-                <li className={styles.close}>
-                    <AiIcons.AiOutlineClose onClick={onChange} />
-                </li>
+            <div className={open ? `${styles.links}` : ` ${styles.closed} ${styles.links}`} onClick={onChange}>
                 <li>
                     <Link to="find" className={styles.findLink}>Find a Job</Link>
                 </li>
