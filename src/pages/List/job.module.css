@@ -21,38 +21,6 @@
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.filter .hidenFilter {
-    position: absolute;
-    right: 5rem;
-    padding: 10px;
-    top: 9rem;
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 8px;
-    z-index: 1;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.hidenFilter div {
-    border: 1px solid gray;
-    margin: 5px 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    width: auto;
-    padding: 5px 0px;
-    border-radius: 8px;
-}
-
-.hidenFilter div:hover {
-    background-color: rgb(6, 65, 6);
-    color: white;
-}
-
 .search input {
     outline: none;
     border: none;
@@ -301,4 +269,40 @@
     color: red;
     margin-right: 10px;
     font-size: 18px;
+}
+
+@media screen and (max-width:650px) {
+    .jobContainer h2 {
+        font-size: 20px;
+    }
+
+    .firstSegment p {
+        font-size: 12px;
+        padding-top: 6px;
+    }
+
+    .firstSegment span {
+        font-size: 12px;
+        padding-top: 6px;
+    }
+
+    .secondSegment span {
+        font-size: 14px;
+    }
+
+    .filterContainer .search {
+        width: 160px;
+    }
+
+    .search input {
+        width: 120px;
+    }
+
+    .filterContainer .filter {
+        width: 160px;
+    }
+
+    .filter select {
+        width: 120px;
+    }
 }
