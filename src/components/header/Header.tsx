@@ -19,7 +19,7 @@ function Header() {
                 <SiIcons.SiMicrosoftoffice />
                 <h2>Job Center</h2>
             </Link>
-            <div className={open ? `${styles.links}` : ` ${styles.closed} ${styles.links}`}>
+            <div className={open ? `${styles.links}` : ` ${styles.active} ${styles.links}`}>
                 <li>
                     <Link to="find" className={styles.findLink} onClick={onChange}>Find a Job</Link>
                 </li>

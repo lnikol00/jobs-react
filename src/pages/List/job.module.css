@@ -278,6 +278,11 @@
 }
 
 @media screen and (max-width:650px) {
+
+    .secondSegment div {
+        overflow: hidden;
+    }
+
     .jobContainer h2 {
         font-size: 20px;
     }

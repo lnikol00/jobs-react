@@ -12,7 +12,6 @@ function JobDetails() {
     const params = useParams();
 
     const [job, setJob] = useState<JobType>()
-    const [person, setPerson] = useState()
     const [error, setError] = useState<null>(null)
     const [isLoading, setIsLoading] = useState<boolean>(true)
     const [disable, setDisable] = useState<boolean>(false)

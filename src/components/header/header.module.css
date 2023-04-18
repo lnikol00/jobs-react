@@ -72,7 +72,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(30%, 7.5%);
+        transform: translate(26.5%, 7.5%);
         background-color: rgb(242, 238, 238);
         display: flex;
         align-items: center;
@@ -96,7 +96,7 @@
     }
 
 
-    .closed {
+    .active {
         right: 100%;
         transition: 0.5s ease;
     }

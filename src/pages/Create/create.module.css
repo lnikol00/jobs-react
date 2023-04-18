@@ -30,6 +30,7 @@
     gap: 20px;
 }
 
+
 .firstSegment div {
     display: flex;
     flex-direction: column;
@@ -77,4 +78,56 @@
     outline: none;
     border: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .mainContainer {
+        overflow: auto;
+        height: 600px;
+    }
+
+    .mainContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mainContainer form {
+        align-items: center;
+    }
+
+    .firstSegment {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .firstSegment input {
+        width: 520px;
+    }
+
+    .firstSegment select {
+        width: 520px;
+    }
+
+}
+
+@media screen and (max-width:620px) {
+    .mainContainer {
+        width: 350px;
+    }
+
+    .firstSegment input {
+        width: 300px;
+    }
+
+    .firstSegment select {
+        width: 300px;
+    }
+
+    .secondSegment input {
+        width: 300px;
+    }
+
+    .secondSegment textarea {
+        width: 300px;
+    }
 }
