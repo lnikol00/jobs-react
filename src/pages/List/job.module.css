@@ -271,6 +271,12 @@
     font-size: 18px;
 }
 
+@media screen and (max-width:890px) {
+    .popUp {
+        display: none;
+    }
+}
+
 @media screen and (max-width:650px) {
     .jobContainer h2 {
         font-size: 20px;
@@ -305,4 +311,5 @@
     .filter select {
         width: 120px;
     }
+
 }

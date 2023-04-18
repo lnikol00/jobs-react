@@ -100,7 +100,9 @@ function JobDetails() {
                                 )
                             })}
                         </div>
-                        {popup}
+                        <div className={styles.popUp}>
+                            {popup}
+                        </div>
                         <Link to="job-aplication" className={styles.button}><button disabled={disable} >Prijavi se za posao</button></Link>
                     </div>
                 </div>
