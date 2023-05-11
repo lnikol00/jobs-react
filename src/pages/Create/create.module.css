@@ -1,8 +1,9 @@
 .mainContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -45%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .mainContainer form {
@@ -82,11 +83,6 @@
 
 @media screen and (max-width: 1200px) {
 
-    .mainContainer {
-        overflow: auto;
-        height: 600px;
-    }
-
     .mainContainer::-webkit-scrollbar {
         display: none;
     }
@@ -111,9 +107,6 @@
 }
 
 @media screen and (max-width:620px) {
-    .mainContainer {
-        width: 350px;
-    }
 
     .firstSegment input {
         width: 300px;
