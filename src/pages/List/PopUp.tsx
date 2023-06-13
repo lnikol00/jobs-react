@@ -1,5 +1,4 @@
-import * as GrIcons from "react-icons/gr"
-import styles from "./job.module.css"
+import "./job.scss"
 import { Link, useNavigate } from "react-router-dom"
 
 function PopUp() {
@@ -12,8 +11,8 @@ function PopUp() {
 
 
     return (
-        <div className={styles.popupContainer}>
-            <div className={styles.note}>
+        <div className="popUp-container">
+            <div className="notes">
                 <p>Sadly there are no more open jobs for this position!</p>
                 <Link to="" onClick={goBack}>Return to job offers...</Link>
             </div>

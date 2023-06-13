@@ -9,7 +9,7 @@ function ProgressBar() {
     }, [filled])
 
     return (
-        <div className={styles.progressBar}>
+        <div className="progressbar-container">
             <div style={{
                 height: "100%",
                 width: `${filled}%`,

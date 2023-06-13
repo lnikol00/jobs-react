@@ -4,8 +4,8 @@ import ProgressBar from "./ProgressBar"
 
 function PopUp() {
     return (
-        <div className={styles.popupContainer}>
-            <div className={styles.note}>
+        <div className="popup-container">
+            <div className="note">
                 <AiIcons.AiOutlineCheck />
                 <p>Thank you! You will be receving Job Offers on your email.</p>
             </div>

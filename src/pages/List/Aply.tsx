@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import styles from "./job.module.css"
+import "./job.scss"
 import { useNavigate, useParams } from "react-router-dom";
 
 const NAME_REGEX = /^[A-Z]+[a-zA-Z]*$/;
@@ -60,8 +60,8 @@ function Aply() {
     }
 
     return (
-        <div className={styles.aplyContainer}>
-            <form onSubmit={handleSubmit}>
+        <div className="aply-container">
+            <form onSubmit={handleSubmit} id="submit-application-form">
                 <span>Broj mobitela je povjerljiva informacija i neće biti prikazan drugim korisnicima!</span>
                 <label>Ime:</label>
                 <input
@@ -75,7 +75,7 @@ function Aply() {
                     onBlur={() => setNameFocus(false)}
                     required
                 />
-                <p id="namenote" className={nameFocus && name && !validName ? `${styles.errmsg}` : `${styles.offscreen}`}>Not a valid name!</p>
+                <p id="namenote" className={nameFocus && name && !validName ? "errmsg" : "offscreen"}>Not a valid name!</p>
                 <label>Prezime:</label>
                 <input
                     type="text"
@@ -87,7 +87,7 @@ function Aply() {
                     onBlur={() => setLastNameFocus(false)}
                     required
                 />
-                <p id="lastnamenote" className={lastNameFocus && lastName && !validLastName ? `${styles.errmsg}` : `${styles.offscreen}`}>Not a valid last name!</p>
+                <p id="lastnamenote" className={lastNameFocus && lastName && !validLastName ? "errmsg" : "offscreen"}>Not a valid last name!</p>
                 <label>Broj mobitela:</label>
                 <input
                     type="tel"
@@ -99,7 +99,7 @@ function Aply() {
                     onBlur={() => setPhoneFocus(false)}
                     required
                 />
-                <p id="phonenote" className={phoneFocus && phone && !validPhone ? `${styles.errmsg}` : `${styles.offscreen}`}>Not a valid phone number!</p>
+                <p id="phonenote" className={phoneFocus && phone && !validPhone ? "errmsg" : "offscreen"}>Not a valid phone number!</p>
                 <button disabled={!validName || !validLastName || !validPhone ? true : false}>Prijavi se</button>
             </form>
         </div>

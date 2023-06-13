@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import styles from "./job.module.css"
+import "./job.scss"
 import { Link } from "react-router-dom"
 import * as GoIcons from "react-icons/go"
 import * as BsIcons from "react-icons/bs"
@@ -59,15 +59,15 @@ function JobList() {
 
 
     return (
-        <div className={styles.mainContainer}>
+        <div className="container">
             {isLoading && <div>Loading...</div>}
             {error && <div>{error}</div>}
-            <div className={styles.filterContainer}>
-                <div className={styles.search}>
+            <div className="filter-container">
+                <div className="search">
                     <AiIcons.AiOutlineSearch />
                     <input onChange={(e) => setSearch(e.target.value)} />
                 </div>
-                <div className={styles.filter}>
+                <div className="filter">
                     <GrIcons.GrFilter />
                     <select
                         value={filter}
@@ -101,14 +101,14 @@ function JobList() {
                     }
                 }).map((job) => {
                     return (
-                        <div className={styles.jobContainer} key={job.id}>
+                        <div className="job-container" key={job.id}>
                             <Link to={`/find/${job.id}`} >
-                                <div className={styles.firstSegment}>
+                                <div className="segment-one">
                                     <p>{job.price}€/h</p>
                                     <span>{job.field}</span>
                                 </div>
                                 <h2>{job.title}</h2>
-                                <div className={styles.secondSegment}>
+                                <div className="segment-two">
                                     <div>
                                         <BsIcons.BsBuildings />
                                         <span>{job.firm}</span>

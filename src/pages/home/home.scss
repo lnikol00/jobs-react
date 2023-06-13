@@ -1,0 +1,137 @@
+.home-container {
+    display: flex;
+    margin: 5% 10%;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        span {
+            line-height: 2rem;
+            font-size: 1.2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 350px;
+
+            span {
+                font-size: 1rem;
+
+                a {
+                    color: rgb(7, 48, 7);
+                    font-weight: 700;
+                }
+            }
+
+            input {
+                border: 1px solid lightgray;
+                padding: 10px 20px;
+            }
+
+            button {
+                padding: 10px 20px;
+                border: none;
+                outline: none;
+                background-color: rgb(7, 48, 7);
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.popup-container {
+    display: flex;
+    border: 1px solid green;
+    width: 500px;
+    text-align: center;
+    background-color: lightgreen;
+    position: absolute;
+    right: 5rem;
+    top: 6rem;
+    flex-direction: column;
+
+    .note {
+        display: flex;
+        margin-bottom: 10px;
+        padding: 20px 20px 5px;
+
+        svg {
+            border-radius: 50%;
+            border: 2px solid green;
+            width: 20px;
+            height: 20px;
+            padding: 2px;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+    }
+}
+
+.progressbar-container {
+    position: relative;
+    overflow: hidden;
+    width: 499px;
+    height: 5px;
+    background-color: lightgreen;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+}
+
+@media screen and (max-width:1200px) {
+    .home-container .text {
+        h1 {
+            font-size: 3rem;
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width:890px) {
+    .home-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .text {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .image img {
+        width: 300px;
+    }
+
+    .popup-container {
+        right: 1rem;
+        width: 300px;
+
+        .note {
+            align-items: center;
+
+            svg {
+                width: 50px;
+                text-align: center;
+                height: 30px;
+            }
+        }
+    }
+
+    .progressbar-container {
+        width: 299px;
+    }
+}

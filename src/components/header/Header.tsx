@@ -1,4 +1,4 @@
-import styles from "./header.module.css"
+import "./header.scss"
 import * as SiIcons from "react-icons/si"
 import { Link } from "react-router-dom"
 import { useState } from "react"
@@ -6,40 +6,38 @@ import { useState } from "react"
 function Header() {
 
     const [open, setOpen] = useState<boolean>(false)
-    const [bars_class, setBarsClass] = useState(`${styles.menuBars} ${styles.menuUnclicked}`)
+    const [bars_class, setBarsClass] = useState("menu-bars unclicked")
 
     const onChange = () => {
         if (!open) {
-            setBarsClass(`${styles.menuBars} ${styles.menuClicked}`)
+            setBarsClass("menu-bars clicked")
         }
         else {
-            setBarsClass(`${styles.menuBars} ${styles.menuUnclicked}`)
+            setBarsClass("menu-bars unclicked")
         }
         setOpen(!open)
     }
 
     return (
-        <div className={styles.mainContainer}>
-            <nav className={styles.headerContainer}>
-                <div className={styles.barsContainer} onClick={onChange}>
-                    <div className={bars_class}></div>
-                    <div className={bars_class}></div>
-                    <div className={bars_class}></div>
-                </div>
-                <Link to="/" className={styles.heading}>
-                    <SiIcons.SiMicrosoftoffice />
-                    <h2>Job Center</h2>
-                </Link>
-                <div className={open ? `${styles.links}` : ` ${styles.closed} ${styles.links}`}>
-                    <li>
-                        <Link to="find" className={styles.findLink} onClick={onChange}>Find a Job</Link>
-                    </li>
-                    <li>
-                        <Link to="post" className={styles.postLink} onClick={onChange}>Post a Job</Link>
-                    </li>
-                </div>
-            </nav>
-        </div>
+        <nav className="header-container">
+            <div className="bars-container" onClick={onChange}>
+                <div className={bars_class}></div>
+                <div className={bars_class}></div>
+                <div className={bars_class}></div>
+            </div>
+            <Link to="/">
+                <SiIcons.SiMicrosoftoffice />
+                <h2>Job Center</h2>
+            </Link>
+            <div className={open ? "menu-links" : "menu-links closed"}>
+                <li>
+                    <Link to="find" className="find-link" onClick={onChange}>Find a Job</Link>
+                </li>
+                <li>
+                    <Link to="post" className="post-link" onClick={onChange}>Post a Job</Link>
+                </li>
+            </div>
+        </nav>
     )
 }
 

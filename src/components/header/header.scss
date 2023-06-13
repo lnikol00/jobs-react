@@ -1,10 +1,4 @@
-.mainContainer {
-    position: sticky;
-    top: 0;
-    z-index: 4;
-}
-
-.headerContainer {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,102 +6,85 @@
     height: 60px;
     background-color: rgb(242, 238, 238);
     box-shadow: 5px 0px 10px #ccc;
+    z-index: 4;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        color: rgb(6, 65, 6);
+        text-decoration: none;
+        margin-left: 5rem;
+    }
+
+    svg {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        padding-left: 5px;
+    }
 }
 
-.headerContainer .heading {
+.header-container .menu-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    color: rgb(6, 65, 6);
-    text-decoration: none;
-    margin-left: 5rem;
-}
-
-.headerContainer svg {
-    font-size: 1.5rem;
-}
-
-.headerContainer h2 {
-    padding-left: 5px;
-}
-
-.headerContainer .links {
-    display: flex;
-    gap: 30px;
     margin-right: 5rem;
+
+    li {
+        list-style: none;
+    }
 }
 
-.links li {
-    list-style: none;
-}
-
-.links .postLink {
-    text-decoration: none;
-    color: white;
-    background-color: rgb(6, 65, 6);
-    padding: 8px 20px;
-}
-
-.links .findLink {
+.menu-links .find-link {
     text-decoration: none;
     color: rgb(6, 65, 6);
     font-weight: 700;
 }
 
-.menuItem {
-    display: none;
+.menu-links .post-link {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(6, 65, 6);
+    padding: 8px 10px;
 }
 
-.close {
-    display: none;
-}
-
-.barsContainer {
+.bars-container {
     display: none;
 }
 
 @media screen and (max-width:768px) {
-    .menuItem {
-        display: block;
-        transform: translate(0%, 10%);
-        cursor: pointer;
-        color: rgb(6, 65, 6);
-    }
-
-    .links {
+    .header-container .menu-links {
         position: absolute;
         top: 60px;
         left: 0;
         background-color: rgb(242, 238, 238);
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         font-size: 20px;
         flex-direction: column;
         width: 300px;
         height: 100vh;
         transition: 0.5s ease;
-        z-index: 3;
+        z-index: 999;
+
+        li {
+            margin-top: 50px;
+        }
     }
 
-    .close {
-        display: block;
-        transform: translate(5%, 10%);
-        cursor: pointer;
-        color: rgb(6, 65, 6);
-    }
-
-    .links li {
-        margin-top: 50px;
-    }
-
-
-    .closed {
+    .menu-links.closed {
         left: -100%;
         transition: 0.5s ease;
     }
 
-    .barsContainer {
+    .bars-container {
         height: 40px;
         width: 40px;
         display: flex;
@@ -120,31 +97,30 @@
         cursor: pointer;
     }
 
-    .menuBars {
+    .menu-bars {
         width: 1.4em;
         height: 0.2em;
         background-color: rgb(6, 65, 6);
         border-radius: 0.5em;
     }
 
-    .menuClicked:nth-child(1) {
+    .menu-bars.clicked:nth-child(1) {
         transform: rotate(45deg) translate(0.4em, 0.45em);
         transition: ease-out 0.5s;
     }
 
-    .menuClicked:nth-child(2) {
+    .menu-bars.clicked:nth-child(2) {
         transform: scale(0.1);
         transition: ease-out 0.5s;
     }
 
-    .menuClicked:nth-child(3) {
+    .menu-bars.clicked:nth-child(3) {
         transform: rotate(-45deg) translate(0.3rem, -0.35rem);
         transition: ease-out 0.5s;
     }
 
-    .menuUnclicked {
+    .menu-bars.unclicked {
         transform: rotate(0) translate(0);
         transition: cubic-bezier(0.275, 0.885, 0.32, 1) 0.5s;
     }
-
 }

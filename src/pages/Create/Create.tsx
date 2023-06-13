@@ -1,5 +1,5 @@
 import { useState } from "react"
-import styles from "./create.module.css"
+import "./create.scss"
 import { useNavigate } from "react-router-dom"
 
 function Create() {
@@ -32,10 +32,10 @@ function Create() {
     }
 
     return (
-        <div className={styles.mainContainer}>
-            <form onSubmit={handleSubmit}>
+        <div className="create-container">
+            <form onSubmit={handleSubmit} id="submit-job-form">
                 <h1>Post a job!</h1>
-                <div className={styles.firstSegment}>
+                <div className="first-segment">
                     <div>
                         <label>Satnica: *</label>
                         <input
@@ -70,7 +70,7 @@ function Create() {
                         </input>
                     </div>
                 </div>
-                <div className={styles.secondSegment}>
+                <div className="second-segment">
                     <label>Naslov: *</label>
                     <input
                         value={title}

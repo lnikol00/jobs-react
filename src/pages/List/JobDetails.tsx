@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom"
-import styles from "./job.module.css"
+import "./job.scss"
 import { useEffect, useState } from "react";
 import { JobType } from "./JobList";
 import * as BsIcons from "react-icons/bs"
@@ -54,18 +54,18 @@ function JobDetails() {
     }, [job?.aplications.length, job?.max])
 
     return (
-        <div className={styles.mainContainer}>
+        <div className="container">
             {isLoading && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {job &&
-                <div className={styles.singleJob}>
-                    <div className={styles.heading}>
-                        <div className={styles.segmentOne}>
+                <div className="single-job-container">
+                    <div className="heading">
+                        <div className="segment-three">
                             <p>{job.price}€/h</p>
                             <span>{job.field}</span>
                         </div>
                         <h2>{job.title}</h2>
-                        <div className={styles.segmenTwo}>
+                        <div className="segment-four">
                             <div>
                                 <BsIcons.BsBuildings />
                                 <span>{job.firm}</span>
@@ -80,7 +80,7 @@ function JobDetails() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.desc}>
+                    <div className="desc">
                         <div>
                             <h2>Opis posla:</h2>
                             <p>{job.desc}</p>
@@ -89,7 +89,7 @@ function JobDetails() {
                             <h2>Kontakt informacije:</h2>
                             <span>{job.contact}</span>
                         </div>
-                        <div className={styles.aplications}>
+                        <div className="applications">
                             <h2>Popis prijavljenih osoba:</h2>
                             {job.aplications && job.aplications.map((person) => {
                                 return (
@@ -99,10 +99,10 @@ function JobDetails() {
                                 )
                             })}
                         </div>
-                        <div className={styles.popUp}>
+                        <div className="popup-jobs">
                             {popup}
                         </div>
-                        <Link to="job-aplication" className={styles.button}><button disabled={disable} >Prijavi se za posao</button></Link>
+                        <Link to="job-aplication"><button disabled={disable} >Prijavi se za posao</button></Link>
                     </div>
                 </div>
             }
