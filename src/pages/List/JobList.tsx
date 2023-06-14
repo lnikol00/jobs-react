@@ -17,10 +17,11 @@ export type JobType = {
     field: string
     price: string
     max: number
-    aplications: Names[]
+    applications: Names[]
 }
 
 type Names = {
+    jobId: number
     id: number
     name: string
     lastName: string

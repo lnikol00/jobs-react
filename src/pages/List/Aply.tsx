@@ -49,7 +49,7 @@ function Aply() {
         e.preventDefault();
         const person = { name, lastName, phone }
 
-        fetch(`http://localhost:8000/jobs/${params.id}/aplications`, {
+        fetch(`http://localhost:8000/jobs/${params.id}/applications`, {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(person)

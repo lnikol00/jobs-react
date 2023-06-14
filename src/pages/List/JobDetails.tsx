@@ -5,7 +5,6 @@ import { JobType } from "./JobList";
 import * as BsIcons from "react-icons/bs"
 import * as GoIcons from "react-icons/go"
 import * as BiIcons from "react-icons/bi"
-import PopUp from "./PopUp";
 
 function JobDetails() {
 
@@ -14,12 +13,10 @@ function JobDetails() {
     const [job, setJob] = useState<JobType>()
     const [error, setError] = useState<null>(null)
     const [isLoading, setIsLoading] = useState<boolean>(true)
-    const [disable, setDisable] = useState<boolean>(false)
-    const [popUp, setPopUp] = useState<boolean>(false)
 
 
     useEffect(() => {
-        fetch(`http://localhost:8000/jobs/${params.id}`)
+        fetch(`http://localhost:8000/jobs/${params.id}?_embed=applications`)
             .then((response) => {
                 if (!response.ok) {
                     throw Error('Sorry, we could not fetch the data!')
@@ -37,21 +34,6 @@ function JobDetails() {
             })
 
     }, [params.id])
-
-    let popup = null;
-    if (popUp) {
-        popup = <PopUp />
-    }
-
-    useEffect(() => {
-        if (job?.aplications.length === job?.max) {
-            setDisable(true)
-            setPopUp(true)
-        } else {
-            setDisable(false)
-            setPopUp(false)
-        }
-    }, [job?.aplications.length, job?.max])
 
     return (
         <div className="container">
@@ -91,7 +73,7 @@ function JobDetails() {
                         </div>
                         <div className="applications">
                             <h2>Popis prijavljenih osoba:</h2>
-                            {job.aplications && job.aplications.map((person) => {
+                            {job.applications && job.applications.map((person) => {
                                 return (
                                     <div key={person.id}>
                                         <span>{person.id}.{person.name} {person.lastName}</span>
@@ -99,10 +81,7 @@ function JobDetails() {
                                 )
                             })}
                         </div>
-                        <div className="popup-jobs">
-                            {popup}
-                        </div>
-                        <Link to="job-aplication"><button disabled={disable} >Prijavi se za posao</button></Link>
+                        <Link to="job-aplication"><button>Prijavi se za posao</button></Link>
                     </div>
                 </div>
             }
