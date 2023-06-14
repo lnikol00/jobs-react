@@ -10,7 +10,7 @@ In the project directory, you can run:
 
 In order to run data from db.json, you can run 
 
-### `npx json-server --watch src/data/db.json --port 8000`
+### `npx json-server --watch src/data/db.json --port 8000 --routes routes.json`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
