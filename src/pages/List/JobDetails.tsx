@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { JobType } from "./JobList";
 import * as BsIcons from "react-icons/bs"
 import * as GoIcons from "react-icons/go"
-import * as BiIcons from "react-icons/bi"
 
 function JobDetails() {
 
@@ -16,7 +15,7 @@ function JobDetails() {
 
 
     useEffect(() => {
-        fetch(`http://localhost:8000/jobs/${params.id}?_embed=applications`)
+        fetch(`http://localhost:8000/jobs/${params.id}`)
             .then((response) => {
                 if (!response.ok) {
                     throw Error('Sorry, we could not fetch the data!')
@@ -56,10 +55,6 @@ function JobDetails() {
                                 <GoIcons.GoLocation />
                                 <span>{job.location}</span>
                             </div>
-                            <div>
-                                <BiIcons.BiUser />
-                                <span>{job.max}</span>
-                            </div>
                         </div>
                     </div>
                     <div className="desc">
@@ -76,7 +71,7 @@ function JobDetails() {
                             {job.applications && job.applications.map((person) => {
                                 return (
                                     <div key={person.id}>
-                                        <span>{person.id}.{person.name} {person.lastName}</span>
+                                        <span>{person.name} {person.lastName}</span>
                                     </div>
                                 )
                             })}

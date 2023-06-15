@@ -118,10 +118,6 @@ function JobList() {
                                         <GoIcons.GoLocation />
                                         <span>{job.location}</span>
                                     </div>
-                                    <div>
-                                        <BiIcons.BiUser />
-                                        <span>{job.max}</span>
-                                    </div>
                                 </div>
                             </Link>
                         </div>
