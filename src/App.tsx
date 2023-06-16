@@ -7,6 +7,7 @@ import JobList from './pages/List/JobList';
 import NotFound from './pages/NotFound/NotFound';
 import JobDetails from './pages/List/JobDetails';
 import Aply from './pages/List/Aply';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
+        <Footer />
       </Router>
     </div>
   );
