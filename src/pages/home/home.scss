@@ -2,18 +2,37 @@
     display: flex;
     margin: 5% 10%;
 
+    @media screen and (max-width:890px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .text {
         display: flex;
         flex-direction: column;
         gap: 30px;
 
+        @media screen and (max-width:890px) {
+            justify-content: center;
+            align-items: center;
+        }
+
         h1 {
             font-size: 4rem;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 3rem;
+            }
         }
 
         span {
             line-height: 2rem;
             font-size: 1.2rem;
+
+            @media screen and (max-width: 1200px) {
+                font-size: 1rem;
+            }
         }
 
         form {
@@ -46,6 +65,14 @@
             }
         }
     }
+
+    .image {
+        img {
+            @media screen and (max-width:600px) {
+                width: 300px;
+            }
+        }
+    }
 }
 
 .popup-container {
@@ -59,10 +86,19 @@
     top: 6rem;
     flex-direction: column;
 
+    @media screen and (max-width:600px) {
+        right: 1rem;
+        width: 300px;
+    }
+
     .note {
         display: flex;
         margin-bottom: 10px;
         padding: 20px 20px 5px;
+
+        @media screen and (max-width:600px) {
+            align-items: center;
+        }
 
         svg {
             border-radius: 50%;
@@ -72,6 +108,12 @@
             padding: 2px;
             margin-right: 10px;
             font-size: 18px;
+
+            @media screen and (max-width:600px) {
+                width: 50px;
+                text-align: center;
+                height: 30px;
+            }
         }
     }
 }
@@ -84,54 +126,8 @@
     background-color: lightgreen;
     border-left: 1px solid green;
     border-right: 1px solid green;
-}
 
-@media screen and (max-width:1200px) {
-    .home-container .text {
-        h1 {
-            font-size: 3rem;
-        }
-
-        span {
-            font-size: 1rem;
-        }
-    }
-}
-
-@media screen and (max-width:890px) {
-    .home-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .text {
-            justify-content: center;
-            align-items: center;
-        }
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .image img {
-        width: 300px;
-    }
-
-    .popup-container {
-        right: 1rem;
-        width: 300px;
-
-        .note {
-            align-items: center;
-
-            svg {
-                width: 50px;
-                text-align: center;
-                height: 30px;
-            }
-        }
-    }
-
-    .progressbar-container {
+    @media screen and (max-width: 600px) {
         width: 299px;
     }
 }

@@ -19,10 +19,18 @@
         padding-left: 10px;
         box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 
+        @media screen and (max-width:650px) {
+            width: 160px;
+        }
+
         input {
             outline: none;
             border: none;
             padding-left: 10px;
+
+            @media screen and (max-width:650px) {
+                width: 120px;
+            }
         }
     }
 
@@ -38,12 +46,20 @@
         height: 40px;
         cursor: pointer;
 
+        @media screen and (max-width:650px) {
+            width: 160px;
+        }
+
         select {
             outline: none;
             border: none;
             cursor: pointer;
             padding: 10px 0px;
             text-align: center;
+
+            @media screen and (max-width:650px) {
+                width: 120px;
+            }
         }
     }
 }
@@ -61,6 +77,10 @@
 
     h2 {
         margin: 5px 0px;
+
+        @media screen and (max-width:650px) {
+            font-size: 20px;
+        }
     }
 
     a {
@@ -79,6 +99,11 @@
             border-radius: 4px;
             font-size: 14px;
             font-weight: 500;
+
+            @media screen and (max-width:650px) {
+                font-size: 12px;
+                padding-top: 6px;
+            }
         }
 
         span {
@@ -86,6 +111,11 @@
             color: white;
             padding: 4px 8px;
             border-radius: 4px;
+
+            @media screen and (max-width:650px) {
+                font-size: 12px;
+                padding-top: 6px;
+            }
         }
     }
 
@@ -93,8 +123,19 @@
         display: flex;
         gap: 40px;
 
+        div {
+            @media screen and (max-width:650px) {
+                overflow: hidden;
+            }
+        }
+
         span {
             margin-left: 5px;
+
+            @media screen and (max-width:650px) {
+                font-size: 14px;
+            }
+
         }
     }
 }
@@ -175,10 +216,10 @@
 }
 
 .aply-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
 
     form {
         display: flex;
@@ -225,7 +266,7 @@
 
 .offscreen {
     position: absolute;
-    right: 1000px;
+    right: 5000px;
 }
 
 .errmsg {
@@ -263,60 +304,5 @@
         color: red;
         margin-right: 10px;
         font-size: 18px;
-    }
-}
-
-@media screen and (max-width:890px) {
-    .popup-jobs {
-        display: none;
-    }
-}
-
-@media screen and (max-width:650px) {
-
-    .job-container {
-        h2 {
-            font-size: 20px;
-        }
-
-        .segment-one {
-            p {
-                font-size: 12px;
-                padding-top: 6px;
-            }
-
-            span {
-                font-size: 12px;
-                padding-top: 6px;
-            }
-        }
-
-        .segment-two {
-            div {
-                overflow: hidden;
-            }
-
-            span {
-                font-size: 14px;
-            }
-        }
-    }
-
-    .filter-container {
-        .search {
-            width: 160px;
-
-            input {
-                width: 120px;
-            }
-        }
-
-        .filter {
-            width: 160px;
-
-            select {
-                width: 120px;
-            }
-        }
     }
 }
